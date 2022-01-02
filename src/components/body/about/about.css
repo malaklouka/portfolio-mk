@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;900&display=swap');
+
+
+
+.about {
+  position:relative;
+  left: 50%;
+  margin-top: 35%;
+  transform: translate(-50%, -50%);
+  height: 420px;
+  width: 600px;
+  background: white;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px 8px #242423;
+  padding-bottom: 55px;
+}
+
+.about-top {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  text-align: justify;
+  color:black;
+  padding: 3px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-info {
+  font-weight: 900;
+  text-align: center;
+}
+.about-info:hover{
+  color: teal;
+}
+.picture{
+  height: 300px;
+}
+.info-name{
+  font-weight: 300;
+}
+
+.flap {
+  width: 100%;
+  height: 100%;
+}
+
+.flap::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") rgb(247, 240, 246);
+  background-color: #ffffff10;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-position: 100px;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+.flap::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  right: 0;
+  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") rgb(247, 240, 246);
+
+  background-color: #ffffff10;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-position: -200px;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+.about:hover .flap::after {
+  transform: translatex(300px);
+}
+
+.about:hover .flap::before{
+  transform: translatex(-300px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 120px) {
+  .about-top {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+ 
+  .picture{
+      height: 50px;
+  }
+  .about-info{
+      font-size: 15px;
+  }
+  .info-name {
+      font-size: 24px;
+  }
+}
